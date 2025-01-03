@@ -14,7 +14,7 @@
         <h1 class="text-2xl">Greenden</h1>
 
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="h-7 w-7 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -33,11 +33,28 @@
         </ul>
 
     </nav>
+    <!--Side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p class="inline cursor-pointer" id="close-icon">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 text-gray-600  items-center">
+            <li> 
+                <a href="index.html" class="hover:underline  hover:text-black">Home</a>
+            </li>
+            <li>
+                <a href="Product.html" class="hover:underline  hover:text-black">Products</a>
+            </li>
+            <li>
+                <a href="contact.html" class="hover:underline hover:text-black">Contact</a>
+            </li>
+        </ul>
+    </section>
     <!--center section-->
     <section class="text-center">
         <h1 class="text-3xl font-bold mt-5 text-center">Our Products</h1>
-        <input type="text" class="m-3 p-2 border border-black" placeholder="Search for a Product...." style="width: 80%;">
-        <div class="grid grid-cols-2 mt-5 md:grid-cols-4 p-5  gap-5">
+        <input id="search" type="text" class="m-3 p-2 border border-black" placeholder="Search for a Product...." style="width: 80%;">
+        <div id="product-container" class="grid grid-cols-2 mt-5 md:grid-cols-4 p-5  gap-5">
             <div>
                 <img src="Images/Bestsellerimg1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Rose Plant</h1>
@@ -88,5 +105,6 @@
         <p>The Standard chunf of Lorem ipsum used sinc the 1500s is reproduced below for those interest</p>
         <p>@ 2024 Greenday.com</p>
     </section>
+    <script src="product.js"></script>
 </body>
 </html>
